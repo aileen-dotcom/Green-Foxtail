@@ -351,3 +351,65 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==== Palette Tweaks: Darker / Richer Green ==== */
+
+body {
+  background-color: #101410; /* darker neutral */
+  color: #e4e9e1;
+}
+
+header {
+  background: #07160c;
+  border-bottom: 4px solid #8bdc4f;
+}
+
+.hero {
+  background: linear-gradient(
+      to right,
+      rgba(4, 24, 11, 0.95),
+      rgba(4, 24, 11, 1)
+    ),
+    url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg")
+      center/cover no-repeat;
+}
+
+.logo span,
+.section-title,
+.project-tag,
+.process-step-number {
+  color: #8bdc4f;
+}
+
+.btn-primary {
+  background-color: #8bdc4f;
+  color: #07160c;
+}
+
+.btn-primary:hover {
+  background-color: #a7f46b;
+}
+
+.card {
+  background: #151d15;
+  border: 1px solid #273427;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.contact-details {
+  background: #050d07;
+  color: #e4e9e1;
+}
+
+footer {
+  background: #050d07;
+  color: #a0b59f;
+}
+
+footer a {
+  color: #c5e6b5;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
