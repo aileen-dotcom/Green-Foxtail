@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services – Green Foxtail Website Design</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header -->
@@ -13,7 +13,12 @@
         <div class="logo">
           Green <span>Foxtail</span>
         </div>
-        <nav>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="nav-menu">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html" class="active">Services</a></li>
@@ -28,7 +33,7 @@
     <section>
       <div class="container">
         <p class="section-title">Services</p>
-        <h1 class="section-heading">Thoughtful website design for small teams with big ideas.</h1>
+        <h1 class="section-heading">Thoughtful Website Design for Small Teams with Big Ideas</h1>
         <p>
           Whether you’re launching a new brand or refining an established one,
           Green Foxtail offers a focused set of services to help you show up
@@ -105,7 +110,7 @@
     <section>
       <div class="container">
         <p class="section-title">Pricing</p>
-        <h2 class="section-heading">Simple packages, tailored to you.</h2>
+        <h2 class="section-heading">Simple Packages, Tailored to You</h2>
         <p>
           Every project starts with a conversation and a custom quote, but most
           of our clients fall into one of these ranges.
@@ -114,7 +119,7 @@
         <div class="highlights">
           <div class="card">
             <h3>Starter One-Page</h3>
-            <p style="margin-bottom: 0.5rem;">From $1,200</p>
+            <p style="margin-bottom: 0.5rem;">From $500</p>
             <p>
               A focused single-page website to establish a polished presence
               quickly.
@@ -128,7 +133,7 @@
 
           <div class="card">
             <h3>Signature Site</h3>
-            <p style="margin-bottom: 0.5rem;">From $3,200</p>
+            <p style="margin-bottom: 0.5rem;">From $1,500</p>
             <p>
               A multi-page site for growing brands who need depth and clarity.
             </p>
@@ -141,7 +146,7 @@
 
           <div class="card">
             <h3>Refresh & Refine</h3>
-            <p style="margin-bottom: 0.5rem;">From $1,800</p>
+            <p style="margin-bottom: 0.5rem;">From $1,000</p>
             <p>
               A redesign of your existing site to better match who you are now.
             </p>
@@ -165,7 +170,7 @@
     <section>
       <div class="container">
         <div class="card">
-          <h2>Not sure which service is right for you?</h2>
+          <h2>Not Sure Which Service Is Right for You?</h2>
           <p style="margin: 0.75rem 0 1.25rem;">
             Share where your business is now and where you’d like to be in six
             months. We’ll recommend a simple path forward and a project outline
@@ -186,6 +191,24 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+      
+      // Hamburger menu functionality
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+      
+      // Close menu when clicking on a link
+      const navLinks = navMenu.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
     </script>
   </body>
 </html>
