@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services – Green Foxtail Website Design</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container top-bar">
+        <div class="logo">
+          Green <span>Foxtail</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Services Intro -->
+    <section>
+      <div class="container">
+        <p class="section-title">Services</p>
+        <h1 class="section-heading">Thoughtful website design for small teams with big ideas.</h1>
+        <p>
+          Whether you’re launching a new brand or refining an established one,
+          Green Foxtail offers a focused set of services to help you show up
+          online with clarity and confidence.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section>
+      <div class="container services-grid">
+        <div class="card">
+          <p class="service-meta">Signature Service</p>
+          <h3>Custom Website Design</h3>
+          <p>
+            A fully bespoke website crafted around your brand, your messaging
+            and your goals. Ideal for businesses ready for a polished, long-term
+            online home.
+          </p>
+          <ul class="service-list">
+            <li>Up to 8 custom-designed pages</li>
+            <li>Homepage, services, about, blog & more</li>
+            <li>Mobile-responsive design</li>
+            <li>Basic on-page SEO setup</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <p class="service-meta">For Quick Launches</p>
+          <h3>One-Page Websites</h3>
+          <p>
+            A refined, single-page online presence that gets you out into the
+            world quickly while still looking considered and professional.
+          </p>
+          <ul class="service-list">
+            <li>Strategic, scroll-based layout</li>
+            <li>Clear calls-to-action</li>
+            <li>Perfect for new offers or events</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <p class="service-meta">For Growing Brands</p>
+          <h3>Website Refresh</h3>
+          <p>
+            Already have a site but it no longer reflects who you are? We’ll
+            refine the structure, visuals and messaging to bring everything into
+            alignment.
+          </p>
+          <ul class="service-list">
+            <li>Audit of current website</li>
+            <li>Refined layouts and typography</li>
+            <li>Improved clarity and hierarchy</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <p class="service-meta">Add-On</p>
+          <h3>Brand & Visual System</h3>
+          <p>
+            A simple yet cohesive visual identity to pair with your new site –
+            so everything from your logo to your buttons feels consistent.
+          </p>
+          <ul class="service-list">
+            <li>Primary & secondary logo marks</li>
+            <li>Color palette & typography</li>
+            <li>Basic brand usage guide (PDF)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container">
+        <div class="card">
+          <h2>Not sure which service is right for you?</h2>
+          <p style="margin: 0.75rem 0 1.25rem;">
+            Share where your business is now and where you’d like to be in six
+            months. We’ll recommend a simple path forward and a project outline
+            tailored to you.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Discuss your project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Green Foxtail Studio.</p>
+        <p><a href="contact.html">Contact</a> · <a href="portfolio.html">Portfolio</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
