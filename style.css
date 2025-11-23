@@ -68,6 +68,40 @@ nav a.active {
   border-bottom: 2px solid #7fbf46;
 }
 
+/* ====== Hamburger Menu ====== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 24px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
 /* ====== Hero Section ====== */
 .hero {
   padding: 4rem 0 3rem;
@@ -342,9 +376,61 @@ footer a:hover {
     font-size: 2rem;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #07160c;
+    border-top: 1px solid #273427;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
   nav ul {
-    gap: 0.9rem;
-    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+  }
+
+  nav li {
+    border-bottom: 1px solid #273427;
+  }
+
+  nav li:last-child {
+    border-bottom: none;
+  }
+
+  nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    border-bottom: none;
+    transition: background-color 0.3s ease;
+  }
+
+  nav a:hover,
+  nav a.active {
+    background-color: #8bdc4f;
+    color: #07160c;
+    border-bottom: none;
+  }
+
+  header {
+    position: relative;
   }
 
   .contact-layout {
