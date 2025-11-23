@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Green Foxtail Website Design</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container top-bar">
+        <div class="logo">
+          Green <span>Foxtail</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contact -->
+    <section>
+      <div class="container">
+        <p class="section-title">Contact</p>
+        <h1 class="section-heading">Tell us about your project.</h1>
+        <p>
+          Share a few details about your business and what you’re hoping your
+          new website will do for you. We’ll follow up with a short note and,
+          if it’s a good fit, a proposed next step.
+        </p>
+
+        <div class="contact-layout">
+          <!-- Form -->
+          <div>
+            <form class="contact-form" action="#" method="post">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+
+              <label for="business">Business / brand name</label>
+              <input
+                type="text"
+                id="business"
+                name="business"
+                placeholder="What do you trade as?"
+              />
+
+              <label for="budget">Estimated budget</label>
+              <input
+                type="text"
+                id="budget"
+                name="budget"
+                placeholder="e.g. $2,500 – $4,000"
+              />
+
+              <label for="message">Project details</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us about your website, your timeline and what you’d like to achieve."
+                required
+              ></textarea>
+
+              <button type="submit" class="btn btn-primary">
+                Send enquiry
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Details -->
+          <aside class="contact-details">
+            <h3>Studio details</h3>
+            <p>
+              We work with clients locally and abroad, mostly via email and
+              scheduled video calls.
+            </p>
+            <p>
+              <strong>Email</strong> hello@greenfoxtail.studio
+            </p>
+            <p>
+              <strong>Hours</strong> Mon–Fri, 9am–4pm
+            </p>
+            <p>
+              <strong>Based in</strong> Your City / Remote
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+              We typically book projects 2–4 weeks in advance. If you have a
+              specific deadline, please mention it in your message.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Green Foxtail Studio.</p>
+        <p>
+          Ready when you are.
+          <a href="mailto:hello@greenfoxtail.studio">Email the studio →</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
