@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Foxtail – Website Design Studio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header -->
@@ -13,7 +13,12 @@
         <div class="logo">
           Green <span>Foxtail</span>
         </div>
-        <nav>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="nav-menu">
           <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -27,7 +32,7 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1>Classic, handcrafted websites for modern brands.</h1>
+        <h1>Classic, Handcrafted Websites for Modern Brands</h1>
         <p>
           Green Foxtail is a boutique website design studio crafting elegant,
           timeless sites that feel as polished as your brand. No clutter, no
@@ -45,12 +50,12 @@
       <div class="container">
         <p class="section-title">Why Green Foxtail</p>
         <h2 class="section-heading">
-          A design partner that cares about the details.
+          A Design Studio that Cares About the Details
         </h2>
 
         <div class="highlights">
           <div class="card">
-            <h3>Classic aesthetics</h3>
+            <h3>Classic Aesthetics</h3>
             <p>
               We favour clean layouts, strong typography and refined color
               palettes that stand the test of time – not passing trends.
@@ -58,7 +63,7 @@
           </div>
 
           <div class="card">
-            <h3>Conversion-focused</h3>
+            <h3>Conversion-Focused</h3>
             <p>
               Every page is designed with a purpose: more enquiries, more
               booked calls, more people taking the next step with your brand.
@@ -66,7 +71,7 @@
           </div>
 
           <div class="card">
-            <h3>Tailored to your story</h3>
+            <h3>Tailored to Your Story</h3>
             <p>
               No generic templates. We listen, sketch, iterate and refine until
               your website feels unmistakably “you”.
@@ -74,7 +79,7 @@
           </div>
 
           <div class="card">
-            <h3>Built for longevity</h3>
+            <h3>Built for Longevity</h3>
             <p>
               We design with structure and clarity, so you can easily expand or
               update your site as your business grows.
@@ -88,7 +93,7 @@
     <section>
       <div class="container">
         <p class="section-title">Our Process</p>
-        <h2 class="section-heading">From first sketch to final launch.</h2>
+        <h2 class="section-heading">From First Sketch to Final Launch</h2>
         <p>
           A clear, calm process designed so you always know what’s happening and
           what comes next.
@@ -106,7 +111,7 @@
 
           <div class="card">
             <div class="process-step-number">02</div>
-            <h3>Design direction</h3>
+            <h3>Design Direction</h3>
             <p>
               Moodboards, typography, color and layout concepts come together in
               a design direction tailored to you.
@@ -115,7 +120,7 @@
 
           <div class="card">
             <div class="process-step-number">03</div>
-            <h3>Page design</h3>
+            <h3>Page Design</h3>
             <p>
               We design each key page with clarity and hierarchy, refining
               content and visual details along the way.
@@ -124,7 +129,7 @@
 
           <div class="card">
             <div class="process-step-number">04</div>
-            <h3>Build & launch</h3>
+            <h3>Build & Launch</h3>
             <p>
               Your site is developed, tested and launched – with a smooth hand-off
               and guidance for future updates.
@@ -147,6 +152,24 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+      
+      // Hamburger menu functionality
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+      
+      // Close menu when clicking on a link
+      const navLinks = navMenu.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
     </script>
   </body>
 </html>
