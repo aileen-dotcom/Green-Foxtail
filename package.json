@@ -1,0 +1,21 @@
+{
+  "name": "green-foxtail",
+  "version": "1.0.0",
+  "description": "Green Foxtail Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=/index.html",
+    "start": "npx live-server --port=3000 --open=/index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "html",
+    "css"
+  ],
+  "author": "",
+  "license": "MIT"
+}
