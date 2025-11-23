@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio – Green Foxtail Website Design</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header -->
@@ -13,7 +13,12 @@
         <div class="logo">
           Green <span>Foxtail</span>
         </div>
-        <nav>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="nav-menu">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -28,7 +33,7 @@
     <section>
       <div class="container">
         <p class="section-title">Portfolio</p>
-        <h1 class="section-heading">Selected projects from the studio.</h1>
+        <h1 class="section-heading">Selected Projects from the Studio</h1>
         <p>
           A glimpse at some of the brands we’ve partnered with. Names and
           details can be adjusted to reflect your real projects once you’re
@@ -59,7 +64,7 @@
             alt="Website wireframes and notes on desk"
           />
           <p class="project-tag">Professional Services</p>
-          <h3>Northshore Legal Collective</h3>
+          <h3>The Law Collective</h3>
           <p>
             A classic, trustworthy website for a boutique law practice, pairing
             structured information with warm, human-centred copy.
@@ -98,7 +103,7 @@
     <section>
       <div class="container">
         <div class="card">
-          <h2>Imagine your brand here next.</h2>
+          <h2>Imagine Your Brand Here Next</h2>
           <p style="margin: 0.75rem 0 1.25rem;">
             If you’d like a website that feels tailored, intentional and
             quietly confident, we’d love to hear more about your project.
@@ -118,6 +123,24 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+      
+      // Hamburger menu functionality
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+      
+      // Close menu when clicking on a link
+      const navLinks = navMenu.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
     </script>
   </body>
 </html>
