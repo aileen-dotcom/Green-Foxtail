@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Green Foxtail Website Design</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container top-bar">
+        <div class="logo">
+          Green <span>Foxtail</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <div class="container">
+        <p class="section-title">Portfolio</p>
+        <h1 class="section-heading">Selected projects from the studio.</h1>
+        <p>
+          A glimpse at some of the brands we’ve partnered with. Names and
+          details can be adjusted to reflect your real projects once you’re
+          ready.
+        </p>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section>
+      <div class="container portfolio-grid">
+        <div class="card project-card">
+          <img
+            src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg"
+            alt="Clean modern website on laptop"
+          />
+          <p class="project-tag">Creative Studio</p>
+          <h3>Oakline Studio</h3>
+          <p>
+            A calm, minimalist web presence for a brand strategy studio. Focused
+            on clarity, case studies and a simple path to booking a consult.
+          </p>
+        </div>
+
+        <div class="card project-card">
+          <img
+            src="https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg"
+            alt="Website wireframes and notes on desk"
+          />
+          <p class="project-tag">Professional Services</p>
+          <h3>Northshore Legal Collective</h3>
+          <p>
+            A classic, trustworthy website for a boutique law practice, pairing
+            structured information with warm, human-centred copy.
+          </p>
+        </div>
+
+        <div class="card project-card">
+          <img
+            src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg"
+            alt="Designer working on a tablet"
+          />
+          <p class="project-tag">Consulting</p>
+          <h3>Verdant Advisory</h3>
+          <p>
+            A vibrant yet refined site for a sustainability consultant, using
+            layered greens and organic shapes to echo the work they do.
+          </p>
+        </div>
+
+        <div class="card project-card">
+          <img
+            src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg"
+            alt="Team reviewing design work"
+          />
+          <p class="project-tag">Education</p>
+          <h3>Elmwood Learning Co.</h3>
+          <p>
+            An inviting platform for an online education company, with clear
+            course overviews and a simple registration flow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container">
+        <div class="card">
+          <h2>Imagine your brand here next.</h2>
+          <p style="margin: 0.75rem 0 1.25rem;">
+            If you’d like a website that feels tailored, intentional and
+            quietly confident, we’d love to hear more about your project.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Start a project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Green Foxtail Studio.</p>
+        <p><a href="services.html">Services</a> · <a href="contact.html">Contact</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
