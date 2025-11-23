@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact – Green Foxtail Website Design</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header -->
@@ -13,7 +13,12 @@
         <div class="logo">
           Green <span>Foxtail</span>
         </div>
-        <nav>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="nav-menu">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -28,7 +33,7 @@
     <section>
       <div class="container">
         <p class="section-title">Contact</p>
-        <h1 class="section-heading">Tell us about your project.</h1>
+        <h1 class="section-heading">Tell Us About Your Project</h1>
         <p>
           Share a few details about your business and what you’re hoping your
           new website will do for you. We’ll follow up with a short note and,
@@ -57,7 +62,7 @@
                 required
               />
 
-              <label for="business">Business / brand name</label>
+              <label for="business">Business / Brand Name</label>
               <input
                 type="text"
                 id="business"
@@ -65,15 +70,15 @@
                 placeholder="What do you trade as?"
               />
 
-              <label for="budget">Estimated budget</label>
+              <label for="budget">Estimated Budget</label>
               <input
                 type="text"
                 id="budget"
                 name="budget"
-                placeholder="e.g. $2,500 – $4,000"
+                placeholder="e.g. $500 – $2,500"
               />
 
-              <label for="message">Project details</label>
+              <label for="message">Project Details</label>
               <textarea
                 id="message"
                 name="message"
@@ -89,19 +94,19 @@
 
           <!-- Contact Details -->
           <aside class="contact-details">
-            <h3>Studio details</h3>
+            <h3>Studio Details</h3>
             <p>
               We work with clients locally and abroad, mostly via email and
               scheduled video calls.
             </p>
             <p>
-              <strong>Email</strong> hello@greenfoxtail.studio
+              <strong>Email</strong> anoronanor@gmail.com
             </p>
             <p>
-              <strong>Hours</strong> Mon–Fri, 9am–4pm
+              <strong>Hours</strong> Mon–Sun, 7am–7pm
             </p>
             <p>
-              <strong>Based in</strong> Your City / Remote
+              <strong>Based in</strong> Remote
             </p>
             <p style="margin-top: 1rem; font-size: 0.9rem;">
               We typically book projects 2–4 weeks in advance. If you have a
@@ -125,6 +130,24 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+      
+      // Hamburger menu functionality
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+      
+      // Close menu when clicking on a link
+      const navLinks = navMenu.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
     </script>
   </body>
 </html>
